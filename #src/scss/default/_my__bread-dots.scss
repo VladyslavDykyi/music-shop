@@ -1,0 +1,44 @@
+.bread-dots {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 25px;
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-right: 10px;
+		@media screen and (max-width: 425px) {
+			font-size: 13px;
+			line-height: 17px;
+		}
+		&.active .bread-link {
+			color: $blue-text;
+			& .text {
+				color: $greey;
+			}
+		}
+		& .bread-link {
+			font-family: $R-r;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			color: $greey;
+			margin-left: 5px;
+			&:hover {
+				color: $blue-text;
+			}
+			&:hover .icon-hous::before {
+				color: $blue-text;
+			}
+			&:hover .name {
+				color: $blue-text;
+			}
+			& .text {
+				color: $greey;
+			}
+		}
+	}
+	& .icon-arrowR::before {
+		font-size: 14px;
+	}
+}

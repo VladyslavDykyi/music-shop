@@ -1,0 +1,10 @@
+.daterangepicker.show-calendar .drp-buttons {
+	display: flex;
+	align-items: center;
+}
+.daterangepicker .drp-buttons .cancelBtn {
+	margin-left: 0;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+	background-color: $green-2-100;
+}

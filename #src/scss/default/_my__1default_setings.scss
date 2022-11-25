@@ -1,0 +1,53 @@
+*,
+:before,
+:after {
+	box-sizing: border-box;
+}
+textarea,
+input,
+a,
+button {
+	transition: all 0.2s linear;
+	outline: none;
+}
+a {
+	text-decoration: none;
+}
+html {
+	scroll-behavior: smooth;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+textarea {
+	resize: none;
+}
+body.lock {
+	overflow: hidden !important;
+}
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
+}
+/*---контейнер сайта ---*/
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	@media screen and (max-width: 1024px) {
+		padding: 0 16px;
+	}
+}
+.container2 {
+	width: 100%;
+	max-width: 1570px;
+	margin: 0 auto;
+	padding: 0 20px;
+	@media screen and (max-width: 1024px) {
+		padding: 0 16px;
+	}
+}

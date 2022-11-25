@@ -1,0 +1,114 @@
+.castom-x {
+	position: absolute;
+	right: 15px;
+	top: calc(0% - -15px);
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	&:hover::before,
+	&:hover::after {
+		background-color: rgba(19, 21, 17, 0.4);;
+	}
+}
+.castom-x::before,
+.castom-x::after {
+	content: "";
+	background-color: rgba(19, 21, 17, 0.4);;
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	left: 0;
+	border-radius: 1.5px;
+}
+.castom-x::after {
+	transform: rotate(45deg);
+	top: 12.5px;
+}
+.castom-x::before {
+	transform: rotate(-45deg);
+	top: 12.5px;
+}
+.arcticmodal-container_i2 {
+	@media screen and (max-width: 768px) {
+		padding: 5px;
+	}
+}
+.box-modal {
+	background: $white;
+	position: relative;
+	width: 810px;
+	box-shadow: 0 8px 12px #878784;
+	border-radius: 3px;
+	padding: 48px 30px 75px;
+	@media screen and (max-width: 900px) {
+		width: 700px;
+	}
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		padding: 33px 15px 60px;
+	}
+	&#exampleModal3 {
+		width: 550px;
+		padding: 48px 24px 32px;
+		@media screen and (max-width: 580px) {
+			width: 100%;
+			padding: 48px 15px 60px;
+		}
+		& .popUp {
+			& h2 {
+				margin-top: 0;
+				margin-bottom: 36px;
+				text-align: left;
+			}
+			& p {
+				text-align: left;
+				margin-bottom: 12px;
+			}
+		}
+	}
+}
+.popUp {
+	&-link {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width: 100%;
+		& a:first-child  {
+			margin-left: auto;
+			margin-right: 12px;
+		}
+		& a {
+			
+			width: max-content;
+		}
+	}
+	& svg {
+		position: relative;
+		left: calc(50% - 50px);
+	}
+	& h2 {
+		margin-top: 36px;
+		margin-bottom: 52px;
+		color: #1D350A;
+		text-align: center;
+	}
+	& p {
+		color: #1D350A;
+		text-align: center;
+		& a {
+			color: $green-2-100;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.rotate {
+	animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+	0% {
+		transform: rotateZ(-360deg);
+	}
+}

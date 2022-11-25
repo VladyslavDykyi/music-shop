@@ -1,0 +1,20 @@
+.link {
+	@include use-font($I-m, 500);
+	@include use-size(18px, 22px);
+	color: $green-5-100;
+	display: inline-flex;
+	align-items: center;
+	grid-gap: 8px;
+	&:hover {
+		color: $green-3-100;
+		& svg path {
+			fill: $green-3-100;
+		}
+	}
+	&:active {
+		color: $green-4-100;
+		& svg path {
+			fill: $green-4-100;
+		}
+	}
+}

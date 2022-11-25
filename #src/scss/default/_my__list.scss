@@ -1,0 +1,19 @@
+.list-box {
+	margin-bottom: 60px;
+	&-item {
+		margin-bottom: 20px;
+		padding-left: 25px;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: calc(50% - 7.5px);
+			left: 0;
+			height: 15px;
+			width: 15px;
+			border-radius: 50%;
+			background-color: $green;
+		}
+	}
+}

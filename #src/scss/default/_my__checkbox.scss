@@ -1,0 +1,110 @@
+.check-box {
+	& input {
+		display: none;
+	}
+	& label {
+		position: relative;
+		padding-left: 32px;
+		@include use-font($I-m, 500);
+		@include use-size(14px, 24px);
+		color: $green-5-100;
+		display: inline-block;
+		cursor: pointer;
+		& span {
+			color: $green-3-100;
+		}
+		&:hover {
+			&:after{
+				border-color: $green-5-80;
+			}
+		}
+	}
+	& label:before {
+		content: '';
+		position: absolute;
+		top: calc(50% - 6px);
+		left: 6px;
+		width: 13px;
+		height: 8px;
+		border-bottom: 3px solid $black-40;
+		border-left: 3px solid $black-40;
+		border-radius: 1px;
+		transform: rotateZ(-45deg);
+		z-index: 10;
+		display: none;
+	}
+	& label:after {
+		content: '';
+		position: absolute;
+		top: calc(50% - 12px);
+		left: 0;
+		display: block;
+		width: 24px;
+		height: 24px;
+		border: 1px solid $black-40;
+		border-radius: 3px;
+	}
+	& input:checked + label:before {
+		border-color: $white;
+		display: block;
+	}
+	& input:checked + label:after {
+		border-color: $green-1-100;
+		background-color:  $green-1-100;
+	}
+}
+.check-box2 {
+	& input {
+		display: none;
+	}
+	& label {
+		position: relative;
+		padding-left: 32px;
+		@include use-font($I-m, 500);
+		@include use-size(14px, 24px);
+		color: $green-5-100;
+		display: inline-block;
+		cursor: pointer;
+		& span {
+			color: $green-3-100;
+		}
+		&:hover {
+			&:after{
+				border-color: $green-5-80;
+			}
+		}
+	}
+	& label span:before {
+		content: '';
+		position: absolute;
+		top: calc(50% - 6px);
+		left: 6px;
+		width: 13px;
+		height: 8px;
+		border-bottom: 3px solid $black-40;
+		border-left: 3px solid $black-40;
+		border-radius: 1px;
+		transform: rotateZ(-45deg);
+		z-index: 10;
+		display: none;
+	}
+	& label span:after {
+		content: '';
+		position: absolute;
+		top: calc(50% - 12px);
+		left: 0;
+		display: block;
+		width: 24px;
+		height: 24px;
+		border: 1px solid $black-40;
+		border-radius: 3px;
+	}
+	& input:checked + span:before {
+		border-color: $white;
+		display: block;
+	}
+	& input:checked + span:after {
+		border-color: $green-1-100;
+		background-color:  $green-1-100;
+	}
+}

@@ -1,0 +1,57 @@
+.modal-question {
+	width: 464px;
+	background: $white;
+	box-shadow: 0 8px 10px #8FA6C7;
+	border-radius: 8px;
+	padding: 36px 32px;
+	@media screen and (max-width: 580px) {
+		width: 100%;
+		padding: 15px 11px;
+	}
+	& > h2 {
+		color: $orange;
+		margin-bottom: 16px;
+		text-align: center;
+	}
+	& > p {
+		color: $blue-5;
+		margin-bottom: 36px;
+		text-align: center;
+	}
+	&-form {
+	
+	}
+	&-item {
+		margin-bottom: 36px;
+		& label {
+			display: inline-block;
+			color: $blue-5;
+			margin-bottom: 5px;
+		}
+		& textarea {
+			height: 120px;
+			resize: none;
+		}
+	}
+	&-btn {
+	}
+	&-thanks {
+		width: 352px;
+		padding: 32px;
+		background: $white;
+		box-shadow: 0 8px 10px #8FA6C7;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		& > p {
+			color: $blue-5;
+			margin-top: 36px;
+			text-align: center;
+		}
+		@media screen and (max-width: 580px) {
+			width: 100%;
+			padding: 11px;
+		}
+	}
+}

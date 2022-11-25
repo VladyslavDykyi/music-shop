@@ -1,0 +1,55 @@
+// /*--- стрелочки вернего слайдера ---*/
+.nextArrow,
+.prevArrow {
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $black;
+	z-index: 2;
+	cursor: pointer;
+	transition: all 0.2s linear;
+	&:hover::before {
+		width: 25px;
+		height: 25px;
+	}
+}
+
+.nextArrow:before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-left: 2px solid $blue;
+	border-bottom: 2px solid $blue;
+	position: relative;
+	left: -5px;
+	transform: rotate(225deg);
+}
+.prevArrow:before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-right: 2px solid $blue;
+	border-bottom: 2px solid $blue;
+	position: relative;
+	left: 5px;
+	transform: rotate(135deg);
+}
+.nextArrow,
+.prevArrow {
+	top: calc(50% - 15px);
+	@media screen and (max-width: 425px) {
+		top: calc(103% - 15px);
+	}
+}
+.nextArrow {
+	right: calc(0%);
+}
+.prevArrow {
+	left: calc(0%);
+}
+// /*--- стрелочки вернего слайдера ---*/

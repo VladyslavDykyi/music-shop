@@ -1,0 +1,60 @@
+.form_radio {
+	margin-left: 4px;
+}
+.form_radio input[type=radio] {
+	display: none;
+}
+.form_radio label {
+	display: inline-flex;
+	grid-gap: 4px;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	margin-right: 0;
+	user-select: none;
+	font-family: $I-m;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	color: #1D350A;
+	&:hover span:before{
+		border: 2px solid rgba(73, 111, 35, 0.8);
+		box-shadow: 0 1px 3px rgba(110, 139, 79, 0.4);
+	}
+}
+.form_radio span {
+	margin-right: 2px;
+	display: inline-block;
+	position: relative;
+	width: 24px;
+	height: 24px;
+}
+.form_radio span:before {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background: #FEFFFC;
+	border: 2px solid rgba(19, 21, 17, 0.2);
+	border-radius: 50%;
+}
+
+
+/* Checked */
+.form_radio input[type=radio]:checked + span:before {
+	border: 8px solid #618C35;
+}
+
+
+///* Hover */
+//.form_radio label:hover:before {
+//	filter: brightness(120%);
+//}
+//
+///* Disabled */
+//.form_radio input[type=radio]:disabled + label:before {
+//	filter: grayscale(100%);
+//}

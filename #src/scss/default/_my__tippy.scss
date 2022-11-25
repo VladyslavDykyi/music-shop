@@ -1,0 +1,28 @@
+.tippy-box[data-theme~="my"] {
+	background: $white;
+	border: 1px solid $white;
+	box-sizing: border-box;
+	position: relative;
+	
+}
+.tippy-popper {
+	filter: drop-shadow(3px 3px 4px rgba(23, 17, 50, 0.25));
+}
+.tippy-tooltip[data-placement^=left]>.tippy-arrow {
+	border-left-color: $white;
+	border-width: 16px 0 16px 16px;
+	right: -16px;
+}
+.tippy-tooltip {
+	background: $white;
+	left: -20px !important;
+}
+
+.tippy-content {
+	font-family: $WS-r;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 18px;
+	color: #573CDA;
+	padding: 10px;
+}

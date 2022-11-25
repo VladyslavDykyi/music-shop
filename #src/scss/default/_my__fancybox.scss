@@ -1,0 +1,11 @@
+.fancybox-caption__body {
+	color: $white;
+	font-size: 36px;
+	line-height: 42px;
+	font-family: $R-m;
+	font-weight: 500;
+	@media screen and (max-width: 580px) {
+		font-size: 23px;
+		line-height: 31px;
+	}
+}

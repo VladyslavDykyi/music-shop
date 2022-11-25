@@ -1,0 +1,17 @@
+.pointer {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: -28px;
+		width: 12px;
+		height: 4px;
+		display: block;
+		border-left: 2px solid #515994;
+		border-bottom: 2px solid #515994;
+		transform: rotate(-45deg);
+	}
+}
+
+

@@ -1,0 +1,124 @@
+// .diagram {
+// 	width: 250px;
+// 	height: 250px;
+// 	border-radius: 50%;
+// 	background: #990;
+// 	position: relative;
+// 	overflow: hidden;
+// }
+// .diagram::before {
+// 	content: "";
+// 	display: block;
+// 	position: absolute;
+// 	top: 20px;
+// 	left: 20px;
+// 	right: 20px;
+// 	bottom: 20px;
+// 	border-radius: 50%;
+// 	background: #ccc;
+// 	z-index: 3;
+// 	opacity: 1;
+// }
+// .diagram .piece {
+// 	width: 100%;
+// 	height: 100%;
+// 	left: 0;
+// 	right: 0;
+// 	overflow: hidden;
+// 	position: absolute;
+// }
+// .diagram .piece::before {
+// 	content: "";
+// 	display: block;
+// 	position: absolute;
+// 	width: 50%;
+// 	height: 100%;
+// }
+// .diagram .piece.left {
+// 	transform: rotate(0deg);
+// 	z-index: 2;
+// 	border-radius: 50%; /* only FireFox < 75.0v (fix bug)*/
+// }
+// .diagram.over_50 .piece.left {
+// 	transform: rotate(180deg);
+// }
+// .diagram .piece.right {
+// 	transform: rotate(180deg);
+// 	z-index: 1;
+// 	border-radius: 50%; /* only FireFox < 75.0v (fix bug)*/
+// }
+// .diagram.over_50 .piece.right {
+// 	transform: rotate(360deg);
+// }
+// .diagram .left::before {
+// 	background: #059;
+// }
+// .diagram.over_50 .left::before {
+// 	background: $blue;
+// }
+// .diagram .right::before {
+// 	background: #059;
+// }
+// .diagram .text {
+// 	position: absolute;
+// 	z-index: 3;
+// 	top: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	right: 0;
+// 	text-align: center;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// }
+// .diagram .text b {
+// 	font-size: 72px;
+// }
+.chart {
+	width: 70px;
+	height: 70px;
+	margin: 0 10px;
+	vertical-align: top;
+	position: relative;
+	padding-top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.chart:after {
+	position: absolute;
+	bottom: -45px;
+	color: #0079c0;
+	font-family: $R-r;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+.chart:nth-of-type(1):after {
+	content: "Дней";
+}
+.chart:nth-of-type(2):after {
+	content: "Часов";
+}
+.chart:nth-of-type(3):after {
+	content: "Минут";
+}
+.chart canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.chart span {
+	display: block;
+	color: #017bc6;
+	font-family: $R-b;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28px;
+}
+canvas {
+	max-width: 100%;
+	height: auto;
+	box-sizing: border-box;
+}

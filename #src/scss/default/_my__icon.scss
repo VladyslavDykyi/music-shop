@@ -1,0 +1,60 @@
+.burger {
+	& .icon-burger {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		position: relative;
+		
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			display: inline-block;
+			width: 100%;
+			height: 4px;
+			border-radius: 2px;
+			background-color: $blue-5;
+			transition: all .1s linear;
+		}
+		
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			display: inline-block;
+			width: 100%;
+			height: 4px;
+			border-radius: 2px;
+			background-color: $blue-5;
+			transition: all .1s linear;
+		}
+		
+		& i {
+			display: inline-block;
+			width: 100%;
+			height: 4px;
+			border-radius: 2px;
+			background-color: $blue-5;
+			transition: all .1s linear;
+		}
+		
+		
+	}
+	&.active .icon-burger{
+		&:before {
+			top: calc(50% - 2px);
+			transform: rotateZ(45deg);
+		}
+		
+		&:after {
+			bottom: calc(50% - 2px);
+			transform: rotateZ(-45deg);
+		}
+		
+		& i {
+			opacity: 0;
+		}
+	}
+}

@@ -1,0 +1,151 @@
+/*--- стили кнопок ---*/
+.reset-btn {
+	background-color: transparent;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+}
+.btn {
+	width: 100%;
+	padding: 0 15px;
+	border-radius: 3px;
+	border: none;
+	@include use-font($I-m, 500);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	&:disabled {
+		cursor: auto;
+	}
+	&.applyBtn,
+	&.green-def {
+		height: 36px;
+		background-color: $green-2-100;
+		color: $white;
+		@include use-size(16px, 19px);
+		&:hover {
+			background-color: $green-3-100;
+		}
+		&:active {
+			background-color: $green-3-100;
+			box-shadow: inset 0 4px 4px #3E5E1E;
+		}
+		&:disabled {
+			background-color: $black-40;
+			&:active {
+				box-shadow: none;
+			}
+		}
+	}
+	&.cancelBtn,
+	&.grey-def {
+		height: 36px;
+		@include use-size(16px, 19px);
+		background-color: $black-20;
+		border: 1px solid $black-40;
+		color: $black-80;
+		&:hover {
+			background-color: $black-20;
+			border-color:  $black-80;
+		}
+		&:active {
+			color: $black-100;
+			border-color: $green-5-100;
+		}
+	}
+	&.green-b-def {
+		height: 36px;
+		border: 2px solid $green-2-100;
+		background-color: $white;
+		@include use-size(18px, 22px);
+		color: $green-2-100;
+		&:hover {
+			border-color: $green-3-100;
+			color: $green-3-100;
+		}
+		&:active {
+			border-color: $green-4-100;
+			color: $green-4-100;
+		}
+	}
+	&.red-b-def {
+		height: 36px;
+		border: 2px solid $red-80;
+		background-color: $white;
+		@include use-size(18px, 22px);
+		color: $red-80;
+		&:hover {
+			border-color: $red-40;
+			color: $red-40;
+		}
+		&:active {
+			border-color: $red-100;
+			color: $red-100;
+		}
+	}
+	&.yellow-b-def {
+		height: 60px;
+		border: 2px solid $yellow-100;
+		background-color: $white;
+		@include use-size(18px, 22px);
+		color: $green-3-100;
+		&:hover {
+			border-color: $green-3-100;
+			color: $green-3-100;
+		}
+		&:active {
+			border-color: $green-4-100;
+			color: $green-4-100;
+		}
+	}
+	&.green-b-def-regular {
+		border: 2px solid $green-2-100;
+		background-color: $white;
+		@include use-font($I-r, 400);
+		@include use-size(16px, 19px);
+		color: $green-2-100;
+		&:hover {
+			border-color: $green-3-100;
+			color: $green-3-100;
+		}
+		&:active {
+			border-color: $green-4-100;
+			color: $green-4-100;
+		}
+	}
+	&.yellow-question-def {
+		height: 46px;
+		border: 2px solid $yellow-100;
+		background-color: transparent;
+		@include use-size(18px, 22px);
+		color: $yellow-100;
+		&:hover {
+			background-color: $yellow-100;
+			border-color: $yellow-100;
+			color: $white;
+		}
+		&:active {
+			background-color: $yellow-pb;
+			border-color: $yellow-pb;
+			color: $white;
+		}
+	}
+	&.lite-green-def {
+		height: 49px;
+		background-color: $green-2-20;
+		border: 1px solid $green-2-40;
+		border-radius: 3px;
+		color: $green-2-100;
+		&:hover {
+			background-color: $green-3-20;
+			color: $green-3-100;
+			border-color: $green-3-40;
+		}
+		&:active {
+			color: $green-4-100;
+			background-color: $green-4-20;
+			border-color: $green-4-40;
+		}
+	}
+}
