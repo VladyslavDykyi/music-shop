@@ -35,19 +35,11 @@ input[type='search']::-webkit-search-results-decoration {
 /*---контейнер сайта ---*/
 .container {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1240px;
 	margin: 0 auto;
 	padding: 0 20px;
 	@media screen and (max-width: 1024px) {
-		padding: 0 16px;
-	}
-}
-.container2 {
-	width: 100%;
-	max-width: 1570px;
-	margin: 0 auto;
-	padding: 0 20px;
-	@media screen and (max-width: 1024px) {
-		padding: 0 16px;
+		max-width: 100%;
+		padding: 0 10px;
 	}
 }

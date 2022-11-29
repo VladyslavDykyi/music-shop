@@ -135,7 +135,7 @@ function fontsStyle(params) {
 
 	let file_content = fs.readFileSync(source_folder + '/scss/default/_fonts.scss');
 	if (file_content == '') {
-		fs.writeFile(source_folder + '/scss/default/fonts.scss', '', cb);
+		fs.writeFile(source_folder + '/scss/default/_fonts.scss', '', cb);
 		return fs.readdir(path.build.fonts, function (err, items) {
 			if (items) {
 				let c_fontname;

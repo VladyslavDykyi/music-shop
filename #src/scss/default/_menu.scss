@@ -1,0 +1,102 @@
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@media screen and (max-width: 1024px) {
+		display: none;
+	}
+	&-bg {
+		padding: 15px 0 16px;
+		background: linear-gradient(269.96deg, #FCC655 0%, #F9EF9F 100%);
+	}
+	&-item {
+		position: relative;
+		&:hover > .drop-down {
+			display: block;
+		}
+		&:hover > .link-btn svg {
+			transform: rotateX(180deg) translateY(2px);
+		}
+		& a {
+			font-family: $l-r;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 19px;
+			color: #000000;
+			& svg {
+				transform: rotateX(0) translateY(0);
+			}
+		}
+		& .drop-down {
+			display: none;
+			position: absolute;
+			background: linear-gradient(339.87deg, #FCC655 -137.43%, #F9EF9F 201.18%);
+			border-radius: 0 0 10px 10px;
+			padding: 10px;
+			width: calc(100% + 60px);
+			&-item {
+				margin-bottom: 10px;
+
+				&:first-child  a {
+					font-size: 16px;
+					line-height: 19px;
+				}
+				&:last-child {
+					margin-bottom: 0;
+					& a {
+						border-bottom: 1px solid #FE2181;
+					}
+				}
+				& a {
+					font-size: 14px;
+					line-height: 17px;
+					border-bottom: 1px solid transparent;
+					&:active {
+						color: #EE077D;
+						border-bottom: 1px solid transparent;
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			& .drop-down {
+				background: linear-gradient(324.58deg, #FCC655 -155.74%, #F9EF9F 141.72%);
+			}
+		}
+		&:nth-child(3) {
+			& .drop-down {
+				background: linear-gradient(339.87deg, #FCC655 -137.43%, #F9EF9F 201.18%);
+			}
+		}
+		&:nth-child(4) {
+			& .drop-down {
+				background: linear-gradient(327.64deg, #FCC655 -152.28%, #F9EF9F 351.41%);
+			}
+		}
+		&:nth-child(5) {
+			& .drop-down {
+				background: linear-gradient(1.33deg, #FCC655 -94.3%, #F9EF9F 461.34%);
+			}
+		}
+	}
+}
+.mob-menu {
+	display: none;
+	@media screen and (max-width: 1024px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&-btn {
+		display: flex;
+		align-items: center;
+		grid-gap: 10px;
+		& span {
+			font-family: $l-r;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16px;
+			color: #000000;
+		}
+	}
+}

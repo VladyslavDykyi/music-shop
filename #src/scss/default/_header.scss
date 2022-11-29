@@ -1,33 +1,89 @@
 .header {
-	display: flex;
-	align-items: center;
-	grid-gap: 40px;
-	padding: 10px 0;
-	@media screen and (max-width: 1280px) {
-		grid-gap: 20px;
-	}
-	@media screen and (max-width: 1024px) {
-		justify-content: space-between;
-		padding: 7px 0;
-	}
-
 	&-bg {
 		width: 100vw;
-		background-color: $white;
-		box-shadow: 0 0 10px #F0F0ED;
-		position: fixed;
-		z-index: 1000;
-		top: 0;
+		background-image: url("../../img/headerbg.jpg");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position-x: right;
+		padding: 15px 0;
+		@media screen and (max-width: 1024px) {
+			background-size: cover;
+			padding: 11px 0;
+		}
 	}
-
+	&-menu {
+		width: 100vw;
+		background: linear-gradient(180deg, #1B1083 0%, rgba(27, 16, 131, 0) 100%);
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		& ul {
+			width: 100%;
+			max-width: 1240px;
+			padding: 0 20px;
+			margin: 22px auto 43px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			position: relative;
+			z-index: 100;
+			& li {
+				margin: 0 16px 0 15px;
+				height: 22px;
+				position: relative;
+				@media screen and (max-width: 1024px) {
+					margin: 0 11px 0 10px;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					right: -16px;
+					top: 0;
+					width: 1px;
+					height: 22px;
+					display: block;
+					background: rgba(255, 255, 255, 0.3);
+					@media screen and (max-width: 1024px) {
+						right: -11px;
+					}
+				}
+				& .language {
+					background: #FFF68E;
+					border-radius: 4px;
+					width: 22px;
+					height: 22px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-family: $l-r;
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 14px;
+					text-align: center;
+					color: #000000;
+				}
+			}
+		}
+	}
 	&-container {
 		width: 100%;
-		max-width: 1570px;
+		max-width: 1240px;
 		margin: 0 auto;
 		padding: 0 20px;
-		position: relative;
+		//position: relative;
 		@media screen and (max-width: 1024px) {
-			padding: 0 16px;
+			max-width: 100%;
+			padding: 0 10px;
+		}
+	}
+	&-logo {
+		display: inline-block;
+		max-width: 225px;
+		position: relative;
+		z-index: 15;
+		@media screen and (max-width: 1024px) {
+			max-width: 115px;
 		}
 	}
 }
